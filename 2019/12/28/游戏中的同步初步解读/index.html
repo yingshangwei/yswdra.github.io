@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          
+          游戏中的同步初步解读 - null
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/">
+    <link rel="canonical" href="http://yoursite.com/2019/12/28/游戏中的同步初步解读/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -119,13 +119,17 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading"  style="padding:40px">
-                        <h1>Hexo</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading"></span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1>游戏中的同步初步解读</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by John Doe on
+                            2019-12-28
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -246,216 +250,150 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-	        
-                <!-- Main Content -->
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
+                <h2 id="游戏中的同步初步解读"><a href="#游戏中的同步初步解读" class="headerlink" title="游戏中的同步初步解读"></a>游戏中的同步初步解读</h2><h4 id="状态同步："><a href="#状态同步：" class="headerlink" title="状态同步："></a>状态同步：</h4><p>客户端向服务器发送用户操作，服务器接收客户端所发送的用户操作后，在服务器上进行运算处理，得到新的游戏状态（即此时刻的角色位置、属性，地图状态等信息），再把新的游戏状态发送给客户端，客户端接收服务器发送的新状态信息后，更新状态并显示给用户。</p>
+<p>特点：</p>
+<p>1、流量大：状态信息比较多，每次更新发送的信息量很大。</p>
+<p>2、服务器运算压力大：用户操作的计算在服务器完成，可以让某些操作在本地实现，以减轻服务器的运算压力</p>
+<p>3、安全：由于关键操作都在服务器中计算，很容易校验作弊情况。</p>
+<p>应用举例：大型MMORPG游戏，多人同时在线，只需用状态同步同步玩家视野即可</p>
+<h4 id="帧同步："><a href="#帧同步：" class="headerlink" title="帧同步："></a>帧同步：</h4><p>客户端向服务器发送用户操作，服务器将此刻所有用户的操作整合，记录后发送给所有的客户端，客户端对于接收的操作集合进行本地运算处理，更新游戏状态并显示给用户。</p>
+<p>特点：</p>
+<p>1、流量小：只需要广播操作集合即可，发送的信息量远小于状态同步需要发送的信息量。</p>
+<p>2、服务器压力小：服务器只需负责记录每个时刻的操作集合以及广播操作集合即可，运算交给客户端，服务器的运算压力大大减小。</p>
+<p>3、不够安全：由于操作的运算是在本地进行，反作弊措施实施起来较为麻烦，有些作弊情况很难根治，比如FPS游戏的透视挂等。</p>
+<p>应用举例：对延时要求较高的MOBA类游戏（即时战略类RTS）等，这类游戏一般延时高了就会影响到玩家的操作</p>
+<p>以上，个人初步理解。</p>
 
-
-
-<div class="w3-row-padding">
-	<a href="/2019/12/28/游戏中的同步初步解读/">
-        <h2 class="post-title">
-            游戏中的同步初步解读
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-
-<div>
-
-    <a href="/2019/12/28/游戏中的同步初步解读/">
-
-        <div class="post-content-preview">
-            游戏中的同步初步解读状态同步：客户端向服务器发送用户操作，服务器接收客户端所发送的用户操作后，在服务器上进行运算处理，得到新的游戏状态（即此时刻的角色位置、属性，地图状态等信息），再把新的游戏状态发送给客户端，客户端接收服务器发送的新状态信息后，更新状态并显示给用户。
-特点：
-1、流量大：状态信息比较多，每次更新发送的信息量很大。
-2、服务器运算压力大：用户操作的计算在服务器完成，可以.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-12-28
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-<div class="w3-row-padding">
-	<a href="/2019/12/28/TCP 与 UDP 的初步理解/">
-        <h2 class="post-title">
-            TCP 与 UDP 的初步理解
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-	</a>
-
-<div>
-
-    <a href="/2019/12/28/TCP 与 UDP 的初步理解/">
-
-        <div class="post-content-preview">
-            TCP 与 UDP 的初步理解TCP:TCP
-...
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-12-28
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-            
-
-
-
-                <!-- 如果开启评论功能 -->
                 
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/12/28/TCP 与 UDP 的初步理解/" data-toggle="tooltip" data-placement="top" title="TCP 与 UDP 的初步理解">Next post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
             </div>
 
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">Tags</a></h5>
-    <div class="tags">
-        
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">Tags</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://www.sumoon.com" target="_blank">ACE theme</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">About me</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/avatar/logo.png" />
-        
-
-        
-            <p>INNOVATION IS KING!</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/kinggozhang">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>Recent posts</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2019/12/28/%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E5%90%8C%E6%AD%A5%E5%88%9D%E6%AD%A5%E8%A7%A3%E8%AF%BB/">游戏中的同步初步解读</a>
-        </li>
-      
-        <li>
-          <a href="/2019/12/28/TCP%20%E4%B8%8E%20UDP%20%E7%9A%84%E5%88%9D%E6%AD%A5%E7%90%86%E8%A7%A3/">TCP 与 UDP 的初步理解</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        
-    <h5>Achives</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>Friends</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="http://www.sumoon.com" target="_blank">ACE theme</a></li>
-    
-</ul>
+</article>
 
 
-        <hr>
-    
-</div>
 
 
-        
-    </div>
-</div>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -570,7 +508,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite.com/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yoursite.com/2019/12/28/%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E5%90%8C%E6%AD%A5%E5%88%9D%E6%AD%A5%E8%A7%A3%E8%AF%BB/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},

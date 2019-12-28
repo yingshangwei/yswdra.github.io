@@ -18,7 +18,7 @@
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/">
+    <link rel="canonical" href="http://yoursite.com/archives/2019/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -262,84 +262,62 @@
             ">
             
 	        
-                <!-- Main Content -->
-
-
-
-
-<div class="w3-row-padding">
-	<a href="/2019/12/28/游戏中的同步初步解读/">
-        <h2 class="post-title">
-            游戏中的同步初步解读
-        </h2>
-        <h3 class="post-subtitle">
+                
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- 归档列表 -->
             
-        </h3>
-	</a>
-
-<div>
-
-    <a href="/2019/12/28/游戏中的同步初步解读/">
-
-        <div class="post-content-preview">
-            游戏中的同步初步解读状态同步：客户端向服务器发送用户操作，服务器接收客户端所发送的用户操作后，在服务器上进行运算处理，得到新的游戏状态（即此时刻的角色位置、属性，地图状态等信息），再把新的游戏状态发送给客户端，客户端接收服务器发送的新状态信息后，更新状态并显示给用户。
-特点：
-1、流量大：状态信息比较多，每次更新发送的信息量很大。
-2、服务器运算压力大：用户操作的计算在服务器完成，可以.........
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-12-28
-        </p>
-    
-
-</div>
-</div>
-<hr>
-
-
-<div class="w3-row-padding">
-	<a href="/2019/12/28/TCP 与 UDP 的初步理解/">
-        <h2 class="post-title">
-            TCP 与 UDP 的初步理解
-        </h2>
-        <h3 class="post-subtitle">
             
-        </h3>
-	</a>
 
-<div>
+             <!-- 归档列表 -->
 
-    <a href="/2019/12/28/TCP 与 UDP 的初步理解/">
+            
+            <div class="one-tag-list">
+                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
+                    <span class="tag-text">2019</span>
+                </span>
+                <ul>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <li >
+                    12-28
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <a href="/2019/12/28/游戏中的同步初步解读/" style="color: #0085a1">
+                        <span>
+                            游戏中的同步初步解读
+                        </span>
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </li>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <li >
+                    12-28
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <a href="/2019/12/28/TCP 与 UDP 的初步理解/" style="color: #0085a1">
+                        <span>
+                            TCP 与 UDP 的初步理解
+                        </span>
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </li>
+                
+                </ul>
+            </div>
+            
 
-        <div class="post-content-preview">
-            TCP 与 UDP 的初步理解TCP:TCP
-...
+
         </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by John Doe on
-            2019-12-28
-        </p>
-    
-
+    </div>
 </div>
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
             
 
 
@@ -570,7 +548,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite.com/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yoursite.com/archives/2019/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
